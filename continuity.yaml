@@ -1,0 +1,66 @@
+session:
+  repository: C:\Users\jlamo\repos\robotics
+  purpose: Robotics-club Python starter project for the user's daughter
+
+project:
+  status: Neutral, board/platform-agnostic scaffold. Club hardware and runtime are still unknown.
+  files:
+    - README.md
+    - .github/copilot-instructions.md
+    - .gitignore
+    - requirements.txt
+    - app/__init__.py
+    - app/config.py
+    - app/robot.py
+    - app/controller.py
+    - firmware/__init__.py
+    - firmware/main.py
+    - firmware/boot.py
+    - firmware/lib/sensors.py
+    - firmware/lib/motors.py
+    - tests/test_robot.py
+    - tests/test_logic.py
+    - scripts/flash.sh
+    - scripts/monitor.py
+    - docs/hardware-notes.md
+    - questions.md
+    - starter_kit/README.md
+    - starter_kit/teleop_drive.py
+    - starter_kit/autonomous_drive.py
+    - starter_kit/vision_tracking.py
+    - starter_kit/pid_control.py
+    - starter_kit/camera_navigation.py
+    - starter_kit/safety_watchdog.py
+    - starter_kit/requirements.txt
+    - starter_kit/starter_kit.ps1
+    - starter_kit/robotics_toolkit.zip
+
+  scaffold_notes:
+    - Project remains intentionally platform-neutral until club hardware/runtime details are known.
+    - app contains host-side logic placeholders; firmware contains device-side placeholders.
+    - starter_kit is an educational collection of basic examples, not integrated project code.
+    - questions.md collects hardware, runtime, goals, safety, and development-workflow questions to answer before implementation.
+    - Python 3.14.7 is available.
+    - Repository-local .venv was created and requirements.txt installed.
+    - Tests were run with .venv\Scripts\python.exe -m pytest -q: 4 passed.
+
+github_setup:
+  status: Not pushed. Git and GitHub CLI were not found on PATH; Git repository and remote state could not be verified.
+  guidance_given:
+    - Install Git with: winget install --id Git.Git -e --source winget
+    - Restart PowerShell, create an empty GitHub repository, and configure name/email.
+    - Initialize, commit, add the GitHub origin remote, and push main using the PowerShell commands provided in the previous turn.
+  notes:
+    - The user asked for PowerShell commands and has not reported running them.
+    - Replace placeholder username/repository/name/email values before running the commands.
+    - Do not assume git init has or has not been run; inspect once Git is available.
+
+next_steps:
+  - Once Git is installed and PowerShell is restarted, check git --version and inspect git status --short --branch and git remote -v before initializing or pushing.
+  - If the directory is not already a Git repository, initialize it, commit the intended project files, add the empty GitHub repository as origin, and push main.
+  - Answer or incorporate the club's actual board/runtime details when available.
+
+important_context:
+  - User is unsure which board or Python runtime the club will use; do not assume Arduino C++, MicroPython, or CircuitPython.
+  - starter_kit materials are for learning basics only; the user explicitly does not want them integrated into the main app at this stage.
+  - User wants continuity across terminal restarts.
